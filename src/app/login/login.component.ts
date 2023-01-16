@@ -1,6 +1,7 @@
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { MainService } from '../main.service';
 import { LoginService } from './login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,27 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnChanges, OnInit,   OnDestroy {
   toggle:boolean=true;
+  @Input() item:any;
   calltoggle(){
     this.toggle= this.toggle?false:true;
   }
+btnsave(){
+  console.log("Form Data", this.form);
+}
+  form:any={
+    "name": "",
+    "email": "",
+    "city": "",
+    "password":""
+      }
+
+     
   constructor(_services:MainService, private loginservice:LoginService, ){
     //  let courses = new MainService();
     console.log("courses", _services.getcourses());
     console.log(this.loginservice.setlogindetail().city);
+
+    
 
     
   }
@@ -32,4 +47,8 @@ export class LoginComponent implements OnChanges, OnInit,   OnDestroy {
   ngOnDestroy(): void {
     console.log('inside destroy');
   }
+  
+  
 }
+
+

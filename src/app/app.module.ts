@@ -10,11 +10,19 @@ import { NavbarModule } from './navbar/navbar.module';
 import { MainService } from './main.service';
 import { NgModule } from '@angular/core';
 import { FooterModule } from './footer/footer.module';
+import { ProductsComponent } from './products/products.component';
+import { SingleProductComponent } from './single-product/single-product.component';
+import {MatCardModule} from '@angular/material/card';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
+    ProductsComponent,
+    SingleProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +32,8 @@ import { FooterModule } from './footer/footer.module';
     NavbarModule,
     LoginModule,
     FooterModule,
+    MatCardModule
+    
     
   ],
   providers: [MainService],

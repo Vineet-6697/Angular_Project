@@ -1,29 +1,22 @@
  <app-navbar></app-navbar> 
- <!-- <div class="container">
- 
- 
-</div> -->
-<app-login></app-login> 
-<app-footer></app-footer>
 
-  
-<!-- <div class=" container mt-3">
+<!-- <app-login></app-login>  -->
+<!-- <app-products (productDetail)="getData($event)"></app-products> -->
+<!-- <app-products (productDetail)="assignData($event)"></app-products> -->
 
-  <div class="main-container">
-    <div class="col-12 form-control">
-    <mat-label>E-Mail</mat-label>
-    <input matInput>
-  </div> <br>
-  <app-login></app-login>
-  <div class="col-12 form-control">
-    <mat-label>Password</mat-label>
-    <input matInput>
+
+
+  <!-- <div *ngIf="!productdetail">
+    <app-products (productDetail)="assignData($event)"></app-products>
   </div>
-  </div> <br>
-  <app-login></app-login> <br> -->
-
-<!-- <course></course>
-
-
-</div> -->
-
+  <div *ngIf="productdetail">
+    <app-single-product [productDetail]="productdetail"></app-single-product>
+  </div>  -->
+   <div *ngIf="!productdetail; else singleProduct">
+    <app-products (productDetail)="assignData($event)"></app-products>
+  </div>
+ <ng-template #singleProduct>
+    <app-single-product (removeValue)="assignData($event)" [productDetail]="productdetail"></app-single-product>
+  </ng-template>
+  
+  <app-footer></app-footer>

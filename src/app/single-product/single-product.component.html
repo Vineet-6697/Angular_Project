@@ -1,0 +1,56 @@
+<div class="container" *ngIf="productDetail">
+    
+        <!-- <div class="col-12">
+            <span>{{productDetail.id}}</span>
+            <h1> <span>{{productDetail.title}}</span> </h1>
+            <span>{{productDetail.description}}</span>
+            <h3> <span>{{productDetail.price}}</span> </h3> <br>
+            <h3><span>{{productDetail.discountPercentage}}</span> </h3>
+            <h5> <span>{{productDetail.rating}}</span> </h5>
+            <span>{{productDetail.stock}}</span>
+           <h4 class="text-success"> <span>{{productDetail.brand}}</span> </h4>
+            <span>{{productDetail.category}}</span>
+            <img src="{{productDetail.thumbnail}}" alt="img" width="250px" height="300px"  >
+            <button (click)="removeProduct()"> Remove Product </button>
+           
+        </div> -->
+        <mat-card>
+            <div class="row ">
+            <div class="col-md-6">
+                <mat-card-content>
+                    <img src="{{productDetail.thumbnail}}" alt="">
+                </mat-card-content>
+            </div>
+            <div class="col-md-6 mt-5 ">
+                <mat-card-title class="single-title text-secondary">
+                    <span>{{productDetail.title}}</span> <span class="text-success ps-3 fs-6" >{{productDetail.rating}}☆</span>
+                </mat-card-title>
+                <mat-card-content class="">
+                    {{productDetail.description}}
+                </mat-card-content>
+                <div class="row ">
+                    <div class="col-md-7">
+                        <mat-card-content>
+                             <span class=" fs-6" style="font-weight: 500;">{{productDetail.brand}} </span>  
+                           </mat-card-content>
+                        
+                    </div>
+                    <div class="col-md-5">
+                        <mat-card-content>
+                            <h4 class="text-danger fs-6" style="font-weight: 500;">₹{{productDetail.price}} </h4>
+                          </mat-card-content>
+                        
+                    </div>
+                </div>
+
+
+                <mat-card-actions> <button class="btn btn-danger ms-2" (click)="removeProduct()"> Remove Product</button>
+                </mat-card-actions>
+            </div>
+        </div>
+        </mat-card>
+
+
+    
+
+</div>

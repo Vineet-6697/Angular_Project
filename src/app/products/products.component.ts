@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import * as productData from '../user.json';
+// import * as productData from '../products.json';
 
 @Component({
   selector: 'app-products',

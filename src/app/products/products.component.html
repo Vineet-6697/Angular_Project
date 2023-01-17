@@ -11,14 +11,15 @@
             <img src="{{product.thumbnail}}" alt="img" width="250px" height="300px"  >
             <button class='btn  btn-success' (click)="passData(product)"> Buy Product</button> -->
 
-    <div class="col-md-3 d-inline-flex   " *ngFor="let product of products.users">
+    <div class="col-md-3 d-inline-flex mt-3  " *ngFor="let product of products.users">
+    <!-- <div class="col-md-3 d-inline-flex   " *ngFor="let product of products.products"> -->
 
         <mat-card>
 
             <div class="row ">
 
                 <mat-card-content>
-                    <img src="{{product.thumbnail}}" width="100%" height="140px" alt="">
+                    <img src="{{product.thumbnail}}" width="100%" height="170px" alt="" class="ps-3 pe-3">
                 </mat-card-content>
 
 

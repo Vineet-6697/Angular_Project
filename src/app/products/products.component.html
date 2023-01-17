@@ -1,7 +1,5 @@
 <div class="container">
-   
-       
-            <!-- <span>{{product.id}}</span>
+    <!-- <span>{{product.id}}</span>
             <h1> <span>{{product.title}}</span> </h1>
             <span>{{product.description}}</span>
             <h3> <span>{{product.price}}</span> </h3> <br>
@@ -13,42 +11,44 @@
             <img src="{{product.thumbnail}}" alt="img" width="250px" height="300px"  >
             <button class='btn  btn-success' (click)="passData(product)"> Buy Product</button> -->
 
-            <div class="col-md-3 d-inline-flex   " *ngFor="let product of products.users">
- 
-    <mat-card>
-       
-        <div class="row ">
-       
-            <mat-card-content>
-                <img src="{{product.thumbnail}}" width="100%" height="140px" alt="">
-            </mat-card-content>
-       
-       
-            <mat-card-title class="ms-3 mt-4">
-                <span>{{product.title.substr(0, 15)}}</span>  <span class="text-success ps-3 fs-6" >{{product.rating}}☆</span>
-            </mat-card-title>
-            <mat-card-content class="ps-4  ms-1" >
-                {{product.description.substr(0, 50)}}
-            </mat-card-content>
+    <div class="col-md-3 d-inline-flex   " *ngFor="let product of products.users">
+
+        <mat-card>
+
             <div class="row ">
-                <div class="col-md-7">
-                    <mat-card-content>
-                         <span class=" fs-6" style="font-weight: 500;">{{product.brand.substr(0,10)}} </span>  
-                       </mat-card-content>
-                    
+
+                <mat-card-content>
+                    <img src="{{product.thumbnail}}" width="100%" height="140px" alt="">
+                </mat-card-content>
+
+
+                <mat-card-title class="ms-3 mt-4">
+                    <span>{{product.title.substr(0, 15)}}</span> <span
+                        class="text-success ps-3 fs-6">{{product.rating}}☆</span>
+                </mat-card-title>
+                <mat-card-content class="ps-4  ms-1">
+                    {{product.description.substr(0, 50)}}
+                </mat-card-content>
+                <div class="row ">
+                    <div class="col-md-7">
+                        <mat-card-content>
+                            <span class=" fs-6" style="font-weight: 500;">{{product.brand.substr(0,10)}} </span>
+                        </mat-card-content>
+
+                    </div>
+                    <div class="col-md-5">
+                        <mat-card-content>
+                            <h4 class="text-danger fs-6" style="font-weight: 500;">₹{{product.price}} </h4>
+                        </mat-card-content>
+
+                    </div>
                 </div>
-                <div class="col-md-5">
-                    <mat-card-content>
-                        <h4 class="text-danger fs-6" style="font-weight: 500;">₹{{product.price}} </h4>
-                      </mat-card-content>
-                    
-                </div>
+                <mat-card-actions class="mb-3 ps-2 ms-3"> <button class="btn  btn-secondary "
+                        (click)="passData(product)"> Buy Product</button>
+                </mat-card-actions>
             </div>
-            <mat-card-actions class="mb-3 ps-2 ms-3"> <button class="btn  btn-secondary " (click)="passData(product)"> Buy Product</button>
-            </mat-card-actions>
-        </div>
-    
-    </mat-card>
-</div>
+
+        </mat-card>
+    </div>
 
 </div>

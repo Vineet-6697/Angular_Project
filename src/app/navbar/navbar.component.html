@@ -1,10 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light  ps-5 " style="  background-color: rgba(0, 0, 0, 0.2);">
     <a class="navbar-brand" href="#"><img src="../../assets/altudotrans.png" width="200px" alt="altudo_logo"></a>
-    <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
+    <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+    (click)="navbarCollapsed = !navbarCollapsed"><span class="navbar-toggler-icon"></span></button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.collapse]="navbarCollapsed">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
